@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 统一a标签样式 */
+a {
+  list-style: none;
+  color: black;
+  text-decoration: none;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* 当窗口小于600px的样式 */
+@media screen and (max-width:620px) {
+
+  /* 主容器 */
+  .container {
+    width: 100%;
+  }
+
+  /* 搜索盒子 */
+  .SearchArea .SearchBox {
+    width: 60%;
+  }
+
+  /* 搜索框 */
+  .SearchArea .SearchBox input {
+    width: 100%;
+  }
+
+  /* 内容文字 */
+  .main>div a h3 {
+    /* overflow: hidden; text-overflow: ellipsis; white-space: nowrap;让文字超出显示省略号 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1.2em;
+  }
+
+  /* 内容盒子 */
+  .main a,
+  .main a .img {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 16px;
+  }
+
+  .container .main {
+    width: 85%;
+    margin: 0 auto;
+    padding-left: 4vw;
+  }
+
+  .container .main>div {
+    width: 20vw;
+    height: 38vw;
+    margin: 0 3.2vw;
+    padding: 0;
+  }
+}
+
+@media (min-width:621px) and (max-width:1000px) {
+
+  /* 主容器 */
+  .container {
+    width: 600px;
+  }
+
+  .container .main {
+    justify-content: space-between;
+  }
+
+  .SearchArea .SearchBox,
+  .SearchArea .SearchBox input {
+    width: 400px;
+  }
+}
+
+/* 当窗口大于1200px的样式 */
+@media screen and (min-width:1001px) {
+  .container .Search {
+    margin-left: -30px;
+  }
+
+  .container {
+    width: 800px;
+  }
+}
+
+/* 当窗口大于1200px的样式 */
+@media screen and (min-width:1800px) {
+  .container {
+    width: 1400px;
+  }
+
+  .container .main>div {
+    padding: 25px;
+  }
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* 主容器 */
+.container {
+  margin: 0 auto;
+}
+
+/* 背景图片 */
+.Background {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("../images/background.jpg") no-repeat center;
+  background-size: cover;
+  min-width: 200px;
+  min-height: 1321px;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+
+/* 搜索的区域*/
+.Search {
+  display: flex;
+  height: 300px;
+  margin-top: 120px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: left;
+  padding-bottom: 38px;
+}
+
+/* 每一个搜索网站的区域*/
+.SearchArea {
+  position: relative;
+}
+
+/* 各官网的文字样式*/
+.SearchArea a {
+  display: inline-block;
+  width: 120px;
+  height: 50px;
+  line-height: 60px;
+  font-weight: 1000;
+  font-size: 26px;
+  color: #34e1a4;
+  text-align: center;
+}
+
+/* 各官网的鼠标悬停样式*/
+.SearchArea a:hover {
+  font-weight: 1200;
+  font-size: 28px;
+}
+
+/* 搜索的form表单 */
+.SearchArea form {
+  display: flex;
+  justify-content: center;
+}
+
+/* 搜索框 */
+.SearchArea input {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 30px;
+  border: 1px solid #8a8a8a;
+  list-style: none;
+  outline: none;
+  font-size: 16px;
+  padding-left: 20px;
+  background-color: rgba(255, 255, 255, .4);
+}
+
+/* 搜索框盒子 */
+.SearchBox {
+  position: relative;
+  width: 80%;
+  height: auto;
+}
+
+/* 搜索按钮 （统一） */
+.SearchBox button {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  right: 5px;
+  border: none;
+  background: url("../images/search.png") transparent no-repeat center;
+  background-size: 46%;
+  border-radius: 50%;
+}
+
+/* 搜索按钮悬停 */
+.SearchBox button:hover {
+  /* 小抓手 */
+  cursor: pointer;
+}
+
+/* 内容主体 */
+.main {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  min-height: 200px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* 内容盒子（统一） */
+.main .img {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  border-radius: 32px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.main>div {
+  padding: 20px;
+}
+
+/* 内容文字 */
+.main>div h3 {
+  text-align: center;
+  font-size: 30px;
+  line-height: 50px;
+  color: white;
+}
+
+.BiliBili .img {
+  background: url("../images/bilibili.png") transparent no-repeat center;
+}
+
+/* 内容盒子悬停 */
+.main .img:hover {
+  /* 阴影 */
+  box-shadow: 5px 5px 10px 1px #e78282;
+}
+
+/* 内容图标 */
+.acfun .img {
+  background: url("../images/acfun.jfif") transparent no-repeat center;
+}
+
+.moefun .img {
+  background: url("../images/moefun.jpg") transparent no-repeat center;
+}
+
+.agedm .img {
+  background: url("../images/agedm.png") transparent no-repeat center;
+}
+
+/* 一定要放在内容图标后面 */
+.main .img {
+  background-size: cover;
+}
